@@ -14,10 +14,9 @@ executor = ThreadPoolExecutor(max_workers=5)
 def index():
     return render_template('index.html')
 
-
 def get_resume(additional_information, extracted_text):
     final_resume = calculations.resume_final(extracted_text, additional_information)
-    
+    return final_resume
 
 @app.route('/submit', methods=['POST'])
 def submit():
