@@ -8,7 +8,6 @@ import json
 app = Flask(__name__)
 cors = CORS(app, resources={r"/submit": {"origins": "*"}})
 api = None
-executor = ThreadPoolExecutor(max_workers=5)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
