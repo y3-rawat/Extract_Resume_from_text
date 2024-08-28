@@ -1,4 +1,3 @@
-
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 from concurrent.futures import ThreadPoolExecutor
@@ -9,9 +8,6 @@ app = Flask(__name__)
 cors = CORS(app, resources={r"/submit": {"origins": "*"}})
 api = None
 
-@app.route('/', methods=['GET', 'POST'])
-def index():
-    return render_template('index.html')
 
 # def get_resume(additional_information, extracted_text):
 #     final_resume = calculations.resume_final(extracted_text, additional_information)
