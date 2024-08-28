@@ -8,7 +8,7 @@ def process_resume(full_resume, prompt, key):
     {prompt}
     {full_resume}
     """
-    output = apis.final(full_prompt)
+    output = apis.final(full_prompt,key)
     return key, output
 
 def final_run_resume(resume, additional_information):
